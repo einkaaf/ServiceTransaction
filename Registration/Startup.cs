@@ -38,7 +38,7 @@ namespace Registration
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Registration", Version = "v1" });
             });
 
-            services.AddDbContext<AppDBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("StudnetDBTest")));
+            services.AddDbContext<AppDBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("StudentDB")));
 
             services.AddScoped<StudentRepo>();
             services.AddScoped<StudentService>();

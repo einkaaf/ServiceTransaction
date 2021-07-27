@@ -12,6 +12,7 @@ namespace RegistrationStatus.Consumer
         public async Task Consume(ConsumeContext<Student> context)
         {
             var data = context.Message;
+            Console.WriteLine(data);
             //Validate the Ticket Data
             //Store to Database
             //Notify the user via Email / SMS

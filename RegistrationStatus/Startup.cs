@@ -37,7 +37,7 @@ namespace RegistrationStatus
                         h.Username("guest");
                         h.Password("guest");
                     });
-                    cfg.ReceiveEndpoint("ticketQueue", ep =>
+                    cfg.ReceiveEndpoint("registerQueue", ep =>
                     {
                         ep.PrefetchCount = 16;
                         ep.ConfigureConsumer<RabbitConsumer>(provider);
